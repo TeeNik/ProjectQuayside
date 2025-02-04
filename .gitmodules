@@ -1,0 +1,3 @@
+[submodule "Quayside/vendor/spdlog"]
+	path = Quayside/vendor/spdlog
+	url = https://github.com/gabime/spdlog
