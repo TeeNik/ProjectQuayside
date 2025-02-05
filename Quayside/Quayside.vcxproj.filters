@@ -24,12 +24,18 @@
     <ClInclude Include="src\Quayside\EntryPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Quayside.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Quayside\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Quayside\Application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Quayside.h">
+    <ClCompile Include="src\Quayside\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
