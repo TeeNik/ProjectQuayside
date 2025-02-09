@@ -7,7 +7,6 @@ namespace Quayside
     class QUAYSIDE_API KeyEvent : public Event
     {
     public:
-        virtual ~KeyEvent() = default;
         inline int GetKeyCode() const {return KeyCode;}
 
         EVENT_CLASS_CATEGORY(EventCategoryKeyboard | EventCategoryInput)
