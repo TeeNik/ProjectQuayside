@@ -4,6 +4,9 @@
     <Filter Include="Quayside">
       <UniqueIdentifier>{EA3EF855-D60B-5361-FF24-4109EB5088EF}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Quayside\Events">
+      <UniqueIdentifier>{8EBF28A0-FA4A-9664-035C-19596F66F264}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Quayside.h" />
@@ -15,6 +18,9 @@
     </ClInclude>
     <ClInclude Include="src\Quayside\EntryPoint.h">
       <Filter>Quayside</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Quayside\Events\Event.h">
+      <Filter>Quayside\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Quayside\Log.h">
       <Filter>Quayside</Filter>
