@@ -13,7 +13,7 @@ namespace Quayside
 		CoreLogger->set_level(spdlog::level::trace);
 
 		ClientLogger = spdlog::stdout_color_mt("APPLICATION");
-		CoreLogger->set_level(spdlog::level::trace);
+		ClientLogger->set_level(spdlog::level::trace);
 	}
 
 }

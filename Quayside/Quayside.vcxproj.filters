@@ -19,7 +19,16 @@
     <ClInclude Include="src\Quayside\EntryPoint.h">
       <Filter>Quayside</Filter>
     </ClInclude>
+    <ClInclude Include="src\Quayside\Events\ApplicationEvent.h">
+      <Filter>Quayside\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Quayside\Events\Event.h">
+      <Filter>Quayside\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Quayside\Events\KeyEvent.h">
+      <Filter>Quayside\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Quayside\Events\MouseEvent.h">
       <Filter>Quayside\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Quayside\Log.h">
