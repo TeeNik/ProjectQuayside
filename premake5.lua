@@ -18,6 +18,9 @@ project "Quayside"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "qspch.h"
+	pchsource "Quayside/src/qspch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",

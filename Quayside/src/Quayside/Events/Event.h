@@ -2,9 +2,6 @@
 
 #include "Quayside/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace Quayside
 {
 

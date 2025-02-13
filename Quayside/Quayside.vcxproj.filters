@@ -34,6 +34,7 @@
     <ClInclude Include="src\Quayside\Log.h">
       <Filter>Quayside</Filter>
     </ClInclude>
+    <ClInclude Include="src\qspch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Quayside\Application.cpp">
@@ -42,5 +43,6 @@
     <ClCompile Include="src\Quayside\Log.cpp">
       <Filter>Quayside</Filter>
     </ClCompile>
+    <ClCompile Include="src\qspch.cpp" />
   </ItemGroup>
 </Project>
