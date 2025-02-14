@@ -1,3 +1,6 @@
 [submodule "Quayside/vendor/spdlog"]
 	path = Quayside/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Quayside/vendor/GLFW"]
+	path = Quayside/vendor/GLFW
+	url = https://github.com/glfw/glfw.git

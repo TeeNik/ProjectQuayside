@@ -10,6 +10,11 @@ workspace "Quayside"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "Quayside/vendor/GLFW/include"
+
+include "Quayside/vendor/GLFW"
+
 project "Quayside"
 	location "Quayside"
 	kind "SharedLib"
@@ -31,6 +36,14 @@ project "Quayside"
 	{
 		"%{prj.name}/vendor/spdlog/include",
 		"%{prj.name}/src",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib",
+		"dwmapi.lib"
 	}
 
 	buildoptions
