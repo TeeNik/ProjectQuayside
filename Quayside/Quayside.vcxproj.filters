@@ -1,6 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="Platforms">
+      <UniqueIdentifier>{DDACA145-4917-56BC-9255-0762FEFE3311}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platforms\Windows">
+      <UniqueIdentifier>{17E40808-83FA-069E-CC71-92BF38C7D725}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Quayside">
       <UniqueIdentifier>{EA3EF855-D60B-5361-FF24-4109EB5088EF}</UniqueIdentifier>
     </Filter>
@@ -9,6 +15,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platforms\Windows\WindowsWindow.h">
+      <Filter>Platforms\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\Quayside.h" />
     <ClInclude Include="src\Quayside\Application.h">
       <Filter>Quayside</Filter>
@@ -40,6 +49,9 @@
     <ClInclude Include="src\qspch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platforms\Windows\WindowsWindow.cpp">
+      <Filter>Platforms\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\Quayside\Application.cpp">
       <Filter>Quayside</Filter>
     </ClCompile>

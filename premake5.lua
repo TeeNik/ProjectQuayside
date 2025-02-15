@@ -68,7 +68,11 @@ project "Quayside"
 		}
 
 	filter "configurations:Debug"
-		defines "QS_DEBUG"
+		defines 
+		{
+			"QS_DEBUG",
+			"QS_ENABLE_ASSERTS"
+		}
 		symbols "On"
 
 	filter "configurations:Release"
@@ -120,7 +124,11 @@ project "Sandbox"
 		}
 
 	filter "configurations:Debug"
-		defines "QS_DEBUG"
+		defines
+		{
+			"QS_DEBUG",
+			"QS_ENABLE_ASSERTS"
+		}
 		symbols "On"
 
 	filter "configurations:Release"
