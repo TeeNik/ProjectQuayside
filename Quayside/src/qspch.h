@@ -12,7 +12,7 @@
 #include <unordered_map>
 #include <unordered_set>
 
-
+#include "Quayside/Log.h"
 
 #ifdef QS_PLATFORM_WINDOWS
     #include <Windows.h>
