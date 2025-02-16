@@ -5,6 +5,7 @@ namespace Quayside
 {
 	Application::Application()
 	{
+		Window = std::unique_ptr<Quayside::Window>(Window::Create());
 	}
 
 	Application::~Application()
@@ -13,9 +14,9 @@ namespace Quayside
 
 	void Application::Run()
 	{
-		while(true)
+		while(bRunning)
 		{
-			
+			Window->OnUpdate();
 		}
 	}
 }

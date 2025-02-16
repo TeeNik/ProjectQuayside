@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Quayside/Core.h"
+#include "qspch.h"
 
 namespace Quayside
 {
