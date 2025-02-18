@@ -4,6 +4,7 @@
 
 #include "Quayside/Application.h"
 #include "Quayside/Log.h"
+#include "Quayside/Layer.h"
 
 
 //ENTRY POINT

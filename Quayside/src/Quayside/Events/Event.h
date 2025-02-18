@@ -44,7 +44,6 @@ namespace Quayside
 
 		inline bool IsInCategory(EventCategory category) { return GetCategoryFlags() & category; }
 
-	protected:
 		bool bHandled = false;
 		
 	};

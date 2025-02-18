@@ -40,6 +40,12 @@
     <ClInclude Include="src\Quayside\Events\MouseEvent.h">
       <Filter>Quayside\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Quayside\Layer.h">
+      <Filter>Quayside</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Quayside\LayerStack.h">
+      <Filter>Quayside</Filter>
+    </ClInclude>
     <ClInclude Include="src\Quayside\Log.h">
       <Filter>Quayside</Filter>
     </ClInclude>
@@ -53,6 +59,12 @@
       <Filter>Platforms\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Quayside\Application.cpp">
+      <Filter>Quayside</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Quayside\Layer.cpp">
+      <Filter>Quayside</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Quayside\LayerStack.cpp">
       <Filter>Quayside</Filter>
     </ClCompile>
     <ClCompile Include="src\Quayside\Log.cpp">

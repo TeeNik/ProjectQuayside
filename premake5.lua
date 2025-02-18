@@ -73,14 +73,20 @@ project "Quayside"
 			"QS_DEBUG",
 			"QS_ENABLE_ASSERTS"
 		}
+		staticruntime "off"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "QS_RELEASE"
+		staticruntime "off"
+		runtime "Release"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "QS_DIST"
+		staticruntime "off"
+		runtime "Release"
 		optimize "On"
 
 project "Sandbox"
@@ -129,12 +135,18 @@ project "Sandbox"
 			"QS_DEBUG",
 			"QS_ENABLE_ASSERTS"
 		}
+		staticruntime "off"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "QS_RELEASE"
+		staticruntime "off"
+		runtime "Release"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "QS_DIST"
+		staticruntime "off"
+		runtime "Release"
 		optimize "On"

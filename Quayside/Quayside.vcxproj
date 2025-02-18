@@ -83,7 +83,7 @@
       <AdditionalIncludeDirectories>vendor\spdlog\include;src;vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
@@ -110,7 +110,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
@@ -138,7 +138,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
@@ -164,6 +164,8 @@
     <ClInclude Include="src\Quayside\Events\Event.h" />
     <ClInclude Include="src\Quayside\Events\KeyEvent.h" />
     <ClInclude Include="src\Quayside\Events\MouseEvent.h" />
+    <ClInclude Include="src\Quayside\Layer.h" />
+    <ClInclude Include="src\Quayside\LayerStack.h" />
     <ClInclude Include="src\Quayside\Log.h" />
     <ClInclude Include="src\Quayside\Window.h" />
     <ClInclude Include="src\qspch.h" />
@@ -171,6 +173,8 @@
   <ItemGroup>
     <ClCompile Include="src\Platforms\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Quayside\Application.cpp" />
+    <ClCompile Include="src\Quayside\Layer.cpp" />
+    <ClCompile Include="src\Quayside\LayerStack.cpp" />
     <ClCompile Include="src\Quayside\Log.cpp" />
     <ClCompile Include="src\qspch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
