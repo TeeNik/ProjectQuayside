@@ -12,8 +12,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "Quayside/vendor/GLFW/include"
+IncludeDir["Glad"] = "Quayside/vendor/Glad/include"
 
 include "Quayside/vendor/GLFW"
+include "Quayside/vendor/Glad"
 
 project "Quayside"
 	location "Quayside"
@@ -36,12 +38,14 @@ project "Quayside"
 	{
 		"%{prj.name}/vendor/spdlog/include",
 		"%{prj.name}/src",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib",
 		"dwmapi.lib"
 	}
@@ -59,7 +63,8 @@ project "Quayside"
 		defines
 		{
 			"QS_PLATFORM_WINDOWS",
-			"QS_BUILD_DLL"
+			"QS_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 	
 		postbuildcommands

@@ -4,6 +4,8 @@
 #include "Quayside/Events/ApplicationEvent.h"
 #include "Quayside/Events/KeyEvent.h"
 #include "Quayside/Events/MouseEvent.h"
+#include <GLFW/glfw3.h>
+#include "glad/glad.h"
 
 namespace Quayside
 {
@@ -69,6 +71,8 @@ namespace Quayside
 
         Window = glfwCreateWindow(Data.Width, Data.Height, Data.Title.c_str(), nullptr, nullptr);
         glfwMakeContextCurrent(Window);
+        int Status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+        QS_CORE_ASSERT(Status, "Failed to initialize Glad!");
         glfwSetWindowUserPointer(Window, &Data);
         SetVSync(true);
 
