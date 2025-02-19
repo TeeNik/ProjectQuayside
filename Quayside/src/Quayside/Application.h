@@ -15,15 +15,20 @@ namespace Quayside
 		void PushLayer(Layer* Layer);
 		void PushOverlay(Layer* Layer);
 
+
 		void Run();
 		void OnEvent(Event& Event);
 		bool OnWindowClose(WindowCloseEvent& Event);
 
+		inline Window& GetWindow() { return *Window; }
+		inline static Application& Get() { return *Instance; }
+
 	private:
 		std::unique_ptr<Window> Window;
 		bool bRunning = true;
-
 		LayerStack LayerStack;
+
+		static Application* Instance;
 	};
 
 	//to be defined in the CLIENT

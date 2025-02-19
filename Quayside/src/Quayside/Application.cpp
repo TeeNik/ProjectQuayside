@@ -8,9 +8,14 @@ namespace Quayside
 {
 //#define BIND_EVENT_FUNC(x) std::bind(&x, this, std::placeholders::_1)
 #define BIND_EVENT_FUNC(x) [this](auto&& PH1) {return x(std::forward<decltype(PH1)>(PH1));}
+
+	Application* Application::Instance = nullptr;
 	
 	Application::Application()
 	{
+		QS_CORE_ASSERT(!Instance, "Application already exists");
+		Application::Instance = this;
+		
 		Window = std::unique_ptr<Quayside::Window>(Window::Create());
 		Window->SetEventCallback(BIND_EVENT_FUNC(Application::OnEvent));
 	}
@@ -22,11 +27,13 @@ namespace Quayside
 	void Application::PushLayer(Layer* Layer)
 	{
 		LayerStack.PushLayer(Layer);
+		Layer->OnAttach();
 	}
 
 	void Application::PushOverlay(Layer* Layer)
 	{
 		LayerStack.PushOverlay(Layer);
+		Layer->OnAttach();
 	}
 
 	void Application::Run()

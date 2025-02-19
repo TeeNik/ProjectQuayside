@@ -4,3 +4,6 @@
 [submodule "Quayside/vendor/GLFW"]
 	path = Quayside/vendor/GLFW
 	url = https://github.com/glfw/glfw.git
+[submodule "Quayside/vendor/imgui"]
+	path = Quayside/vendor/imgui
+	url = https://github.com/ocornut/imgui.git
