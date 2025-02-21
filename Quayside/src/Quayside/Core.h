@@ -19,3 +19,6 @@
 #endif
 
 #define BIT(x) (1 << x)
+
+//#define BIND_EVENT_FUNC(x) std::bind(&x, this, std::placeholders::_1)
+#define BIND_EVENT_FUNC(func) [this](auto&& PH1) {return func(std::forward<decltype(PH1)>(PH1));}
