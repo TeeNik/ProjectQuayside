@@ -1,5 +1,6 @@
 workspace "Quayside"
 	architecture "x64"
+	startproject "Sandbox"
 
 	configurations 
 	{
@@ -15,9 +16,11 @@ IncludeDir["GLFW"] = "Quayside/vendor/GLFW/include"
 IncludeDir["Glad"] = "Quayside/vendor/Glad/include"
 IncludeDir["ImGui"] = "Quayside/vendor/ImGui"
 
-include "Quayside/vendor/GLFW"
-include "Quayside/vendor/Glad"
-include "Quayside/vendor/ImGui"
+group "Dependencies"
+	include "Quayside/vendor/GLFW"
+	include "Quayside/vendor/Glad"
+	include "Quayside/vendor/ImGui"
+group ""
 
 project "Quayside"
 	location "Quayside"
@@ -73,7 +76,7 @@ project "Quayside"
 	
 		postbuildcommands
 		{
-			("copy /B /Y ..\\bin\\" .. outputdir .. "\\%{prj.name}\\%{prj.name}.dll ..\\bin\\" .. outputdir .. "\\Sandbox\\ > nul")
+			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
 		}
 
 	filter "configurations:Debug"
@@ -139,11 +142,7 @@ project "Sandbox"
 		}
 
 	filter "configurations:Debug"
-		defines
-		{
-			"QS_DEBUG",
-			"QS_ENABLE_ASSERTS"
-		}
+		defines "QS_DEBUG"
 		staticruntime "off"
 		runtime "Debug"
 		symbols "On"

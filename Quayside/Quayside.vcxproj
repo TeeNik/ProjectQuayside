@@ -95,7 +95,7 @@
       <ImportLibrary>..\bin\Debug-windows-x86_64\Quayside\Quayside.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>copy /B /Y ..\bin\Debug-windows-x86_64\$(ProjectName)\$(ProjectName).dll ..\bin\Debug-windows-x86_64\Sandbox\ &gt; nul</Command>
+      <Command>IF EXIST ..\bin\Debug-windows-x86_64\Quayside\Quayside.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Quayside\Quayside.dll "..\bin\Debug-windows-x86_64\Sandbox\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Quayside\Quayside.dll "..\bin\Debug-windows-x86_64\Sandbox\" &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -123,7 +123,7 @@
       <ImportLibrary>..\bin\Release-windows-x86_64\Quayside\Quayside.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>copy /B /Y ..\bin\Release-windows-x86_64\$(ProjectName)\$(ProjectName).dll ..\bin\Release-windows-x86_64\Sandbox\ &gt; nul</Command>
+      <Command>IF EXIST ..\bin\Release-windows-x86_64\Quayside\Quayside.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\Quayside\Quayside.dll "..\bin\Release-windows-x86_64\Sandbox\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\Quayside\Quayside.dll "..\bin\Release-windows-x86_64\Sandbox\" &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
@@ -151,11 +151,12 @@
       <ImportLibrary>..\bin\Dist-windows-x86_64\Quayside\Quayside.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>copy /B /Y ..\bin\Dist-windows-x86_64\$(ProjectName)\$(ProjectName).dll ..\bin\Dist-windows-x86_64\Sandbox\ &gt; nul</Command>
+      <Command>IF EXIST ..\bin\Dist-windows-x86_64\Quayside\Quayside.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\Quayside\Quayside.dll "..\bin\Dist-windows-x86_64\Sandbox\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\Quayside\Quayside.dll "..\bin\Dist-windows-x86_64\Sandbox\" &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Platforms\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\Platforms\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platforms\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Quayside.h" />
     <ClInclude Include="src\Quayside\Application.h" />
@@ -166,6 +167,7 @@
     <ClInclude Include="src\Quayside\Events\KeyEvent.h" />
     <ClInclude Include="src\Quayside\Events\MouseEvent.h" />
     <ClInclude Include="src\Quayside\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Quayside\Input.h" />
     <ClInclude Include="src\Quayside\Layer.h" />
     <ClInclude Include="src\Quayside\LayerStack.h" />
     <ClInclude Include="src\Quayside\Log.h" />
@@ -174,6 +176,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platforms\OpenGL\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="src\Platforms\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platforms\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Quayside\Application.cpp" />
     <ClCompile Include="src\Quayside\ImGui\ImGuiLayer.cpp" />

@@ -31,7 +31,7 @@ namespace Quayside
         bool OnWindowResizedEvent(WindowResizeEvent& Event);
         bool OnKeyPressedEvent(KeyPressedEvent& Event);
         bool OnKeyReleasedEvent(KeyReleasedEvent& Event);
-        //bool OnKeyTypedEvent(KeyTypedEvent& Event);
+        bool OnKeyTypedEvent(KeyTypedEvent& Event);
         
 
         float Time = 0.0f;

@@ -43,4 +43,11 @@ namespace Quayside
         KeyReleasedEvent(int InKeyCode) : KeyEvent(InKeyCode) {}
         EVENT_CLASS_TYPE(KeyReleased)
     };
+
+    class QUAYSIDE_API KeyTypedEvent : public KeyEvent
+    {
+    public:
+        KeyTypedEvent(int InKeyCode) : KeyEvent(InKeyCode) {}
+        EVENT_CLASS_TYPE(KeyTyped)
+    };
 }

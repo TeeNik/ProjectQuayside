@@ -10,6 +10,10 @@
 	#error Quayside only supports Windows!
 #endif
 
+#ifdef QS_DEBUG
+	#define QS_ENABLE_ASSERTS
+#endif
+
 #ifdef QS_ENABLE_ASSERTS
 	#define QS_ASSERT(x, ...) { if(!(x)) { QS_ERROR("Assetion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
 	#define QS_CORE_ASSERT(x, ...) { if(!(x)) { QS_CORE_ERROR("Assetion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
