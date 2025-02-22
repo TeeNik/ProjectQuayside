@@ -28,6 +28,8 @@ namespace Quayside
         virtual void SetVSync(bool InVSync) = 0;
         virtual bool IsVSync() const = 0;
 
+        virtual void* GetNativeWindow() = 0;
+
         static Window* Create(const WindowProperties& Props = WindowProperties());
     };
 }

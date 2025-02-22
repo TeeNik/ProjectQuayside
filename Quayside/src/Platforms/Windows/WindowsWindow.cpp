@@ -119,6 +119,13 @@ namespace Quayside
                 }
             }
         });
+
+        glfwSetCharCallback(Window, [](GLFWwindow* Window, unsigned int Character)
+        {
+            WindowData& Data = *static_cast<WindowData*>(glfwGetWindowUserPointer(Window));
+            KeyTypedEvent TypedEvent(Character);
+            Data.EventCallback(TypedEvent);
+        });
         
         glfwSetMouseButtonCallback(Window, [](GLFWwindow* Window, int Button, int Action, int Mods)
         {

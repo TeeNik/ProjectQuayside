@@ -20,6 +20,8 @@ namespace Quayside
         void SetVSync(bool Enabled) override;
         bool IsVSync() const override;
 
+        inline virtual void* GetNativeWindow() override { return Window; }
+
     private:
         virtual void Init(const WindowProperties& Props);
         virtual void Shutdown();
