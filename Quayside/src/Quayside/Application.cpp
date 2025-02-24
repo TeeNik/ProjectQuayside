@@ -1,6 +1,8 @@
 #include "qspch.h"
 #include "Application.h"
 #include <GL/gl.h>
+
+#include "Input.h"
 #include "Events/ApplicationEvent.h"
 #include "Events/Event.h"
 
@@ -44,7 +46,7 @@ namespace Quayside
 			{
 				Layer->OnUpdate();
 			}
-			
+
 			Window->OnUpdate();
 		}
 	}
@@ -53,7 +55,6 @@ namespace Quayside
 	{
 		EventDispatcher Dispatcher(Event);
 		Dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FUNC(Application::OnWindowClose));
-		QS_CORE_TRACE(Event.ToString());
 
 		for (auto it = LayerStack.end(); it != LayerStack.begin();)
 		{

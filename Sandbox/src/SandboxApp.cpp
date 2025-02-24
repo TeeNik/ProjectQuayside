@@ -9,12 +9,12 @@ public:
 
 	void OnUpdate() override
 	{
-		QS_INFO("ExampleLayer::OnUpdate");
+		//QS_INFO("ExampleLayer::OnUpdate");
 	}
 
 	void OnEvent(Quayside::Event& Event) override
 	{
-		QS_WARN("ExampleLayer::OnEvent {0}", Event.ToString());
+		//QS_WARN("ExampleLayer::OnEvent {0}", Event.ToString());
 	}
 };
 
