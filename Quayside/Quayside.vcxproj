@@ -168,9 +168,11 @@
     <ClInclude Include="src\Quayside\Events\MouseEvent.h" />
     <ClInclude Include="src\Quayside\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Quayside\Input.h" />
+    <ClInclude Include="src\Quayside\KeyCodes.h" />
     <ClInclude Include="src\Quayside\Layer.h" />
     <ClInclude Include="src\Quayside\LayerStack.h" />
     <ClInclude Include="src\Quayside\Log.h" />
+    <ClInclude Include="src\Quayside\MouseButtonCodes.h" />
     <ClInclude Include="src\Quayside\Window.h" />
     <ClInclude Include="src\qspch.h" />
   </ItemGroup>
