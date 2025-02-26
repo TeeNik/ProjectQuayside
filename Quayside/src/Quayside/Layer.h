@@ -14,7 +14,7 @@ namespace Quayside
         virtual void OnDetach() {};
         virtual void OnUpdate() {};
         virtual void OnEvent(Event& Event) {};
-
+        virtual void OnImGuiRender() {};
         inline const std::string& GetName() { return DebugName; }
 
     protected:

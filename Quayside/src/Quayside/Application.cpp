@@ -16,6 +16,9 @@ namespace Quayside
 		
 		Window = std::unique_ptr<Quayside::Window>(Window::Create());
 		Window->SetEventCallback(BIND_EVENT_FUNC(Application::OnEvent));
+
+		ImGuiLayer = new Quayside::ImGuiLayer();
+		PushOverlay(ImGuiLayer);
 	}
 
 	Application::~Application()
@@ -45,6 +48,13 @@ namespace Quayside
 			{
 				Layer->OnUpdate();
 			}
+
+			ImGuiLayer->Begin();
+			for (auto* Layer : LayerStack)
+			{
+				Layer->OnImGuiRender();
+			}
+			ImGuiLayer->End();
 
 			Window->OnUpdate();
 		}

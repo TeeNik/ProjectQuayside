@@ -4,9 +4,6 @@
     <Filter Include="Platforms">
       <UniqueIdentifier>{DDACA145-4917-56BC-9255-0762FEFE3311}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Platforms\OpenGL">
-      <UniqueIdentifier>{719BB998-5D94-D8EA-86C6-BD6F721EB8F6}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Platforms\Windows">
       <UniqueIdentifier>{17E40808-83FA-069E-CC71-92BF38C7D725}</UniqueIdentifier>
     </Filter>
@@ -21,9 +18,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Platforms\OpenGL\ImGuiOpenGLRenderer.h">
-      <Filter>Platforms\OpenGL</Filter>
-    </ClInclude>
     <ClInclude Include="src\Platforms\Windows\WindowsInput.h">
       <Filter>Platforms\Windows</Filter>
     </ClInclude>
@@ -79,9 +73,6 @@
     <ClInclude Include="src\qspch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Platforms\OpenGL\ImGuiOpenGLRenderer.cpp">
-      <Filter>Platforms\OpenGL</Filter>
-    </ClCompile>
     <ClCompile Include="src\Platforms\Windows\WindowsInput.cpp">
       <Filter>Platforms\Windows</Filter>
     </ClCompile>
@@ -90,6 +81,9 @@
     </ClCompile>
     <ClCompile Include="src\Quayside\Application.cpp">
       <Filter>Quayside</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Quayside\ImGui\ImGuiBuild.cpp">
+      <Filter>Quayside\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\Quayside\ImGui\ImGuiLayer.cpp">
       <Filter>Quayside\ImGui</Filter>

@@ -3,6 +3,7 @@
 #include "LayerStack.h"
 #include "Window.h"
 #include "Events/ApplicationEvent.h"
+#include "ImGui/ImGuiLayer.h"
 
 namespace Quayside
 {
@@ -25,6 +26,7 @@ namespace Quayside
 
 	private:
 		std::unique_ptr<Window> Window;
+		ImGuiLayer* ImGuiLayer;
 		bool bRunning = true;
 		LayerStack LayerStack;
 

@@ -5,7 +5,6 @@ namespace Quayside
 {
     LayerStack::LayerStack()
     {
-        LayerInsert = Layers.begin();
     }
 
     LayerStack::~LayerStack()
@@ -18,7 +17,8 @@ namespace Quayside
 
     void LayerStack::PushLayer(Layer* Layer)
     {
-        LayerInsert = Layers.emplace(LayerInsert, Layer);
+        Layers.emplace(Layers.begin() + LayerInsertIndex, Layer);
+        ++LayerInsertIndex;
     }
 
     void LayerStack::PushOverlay(Layer* Overlay)
@@ -31,7 +31,7 @@ namespace Quayside
         if (auto it = std::find(Layers.begin(), Layers.end(), Layer); it != Layers.end())
         {
             Layers.erase(it);
-            --LayerInsert;
+            --LayerInsertIndex;
         }
     }
 

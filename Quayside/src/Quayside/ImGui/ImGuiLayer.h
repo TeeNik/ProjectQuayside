@@ -20,20 +20,12 @@ namespace Quayside
 
         virtual void OnAttach() override;
         virtual void OnDetach() override;
-        virtual void OnUpdate() override;
-        virtual void OnEvent(Event& Event) override;
+        virtual void OnImGuiRender() override;
+
+        void Begin();
+        void End();
         
     private:
-        bool OnMouseButtonPressedEvent(MouseButtonPressedEvent& Event);
-        bool OnMouseReleasedEvent(MouseButtonReleasedEvent& Event);
-        bool OnMouseMovedEvent(MouseMovedEvent& Event);
-        bool OnMouseScrolledEvent(MouseScrolledEvent& Event);
-        bool OnWindowResizedEvent(WindowResizeEvent& Event);
-        bool OnKeyPressedEvent(KeyPressedEvent& Event);
-        bool OnKeyReleasedEvent(KeyReleasedEvent& Event);
-        bool OnKeyTypedEvent(KeyTypedEvent& Event);
-        
-
         float Time = 0.0f;
     };
 }

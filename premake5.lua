@@ -123,7 +123,8 @@ project "Sandbox"
 	{
 		"Quayside/vendor/spdlog/include",
 		"Quayside/src",
-		"%{IncludeDir.ImGui}",
+		"Quayside/vendor",
+		"%{IncludeDir.glm}",
 	}
 
 	links
