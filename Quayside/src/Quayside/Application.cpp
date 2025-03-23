@@ -1,7 +1,6 @@
 #include "qspch.h"
 #include "Application.h"
 #include <GL/gl.h>
-
 #include "Input.h"
 #include "Events/ApplicationEvent.h"
 #include "Events/Event.h"

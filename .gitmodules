@@ -7,3 +7,6 @@
 [submodule "Quayside/vendor/imgui"]
 	path = Quayside/vendor/imgui
 	url = https://github.com/ocornut/imgui.git
+[submodule "Quayside/vendor/glm"]
+	path = Quayside/vendor/glm
+	url = https://github.com/g-truc/glm.git

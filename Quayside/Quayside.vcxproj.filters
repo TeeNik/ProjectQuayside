@@ -24,6 +24,9 @@
     <ClInclude Include="src\Platforms\OpenGL\ImGuiOpenGLRenderer.h">
       <Filter>Platforms\OpenGL</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platforms\Windows\WindowsInput.h">
+      <Filter>Platforms\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platforms\Windows\WindowsWindow.h">
       <Filter>Platforms\Windows</Filter>
     </ClInclude>
@@ -52,6 +55,12 @@
     <ClInclude Include="src\Quayside\ImGui\ImGuiLayer.h">
       <Filter>Quayside\ImGui</Filter>
     </ClInclude>
+    <ClInclude Include="src\Quayside\Input.h">
+      <Filter>Quayside</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Quayside\KeyCodes.h">
+      <Filter>Quayside</Filter>
+    </ClInclude>
     <ClInclude Include="src\Quayside\Layer.h">
       <Filter>Quayside</Filter>
     </ClInclude>
@@ -59,6 +68,9 @@
       <Filter>Quayside</Filter>
     </ClInclude>
     <ClInclude Include="src\Quayside\Log.h">
+      <Filter>Quayside</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Quayside\MouseButtonCodes.h">
       <Filter>Quayside</Filter>
     </ClInclude>
     <ClInclude Include="src\Quayside\Window.h">
@@ -69,6 +81,9 @@
   <ItemGroup>
     <ClCompile Include="src\Platforms\OpenGL\ImGuiOpenGLRenderer.cpp">
       <Filter>Platforms\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platforms\Windows\WindowsInput.cpp">
+      <Filter>Platforms\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Platforms\Windows\WindowsWindow.cpp">
       <Filter>Platforms\Windows</Filter>

@@ -15,6 +15,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Quayside/vendor/GLFW/include"
 IncludeDir["Glad"] = "Quayside/vendor/Glad/include"
 IncludeDir["ImGui"] = "Quayside/vendor/ImGui"
+IncludeDir["glm"] = "Quayside/vendor/glm"
 
 group "Dependencies"
 	include "Quayside/vendor/GLFW"
@@ -37,6 +38,8 @@ project "Quayside"
 	{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vedor/glm/glm/**.hpp",
+		"%{prj.name}/vedor/glm/glm/**.inl",
 	}
 
 	includedirs
@@ -45,7 +48,8 @@ project "Quayside"
 		"%{prj.name}/src",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}",
 	}
 
 	links
@@ -118,7 +122,8 @@ project "Sandbox"
 	includedirs
 	{
 		"Quayside/vendor/spdlog/include",
-		"Quayside/src"
+		"Quayside/src",
+		"%{IncludeDir.ImGui}",
 	}
 
 	links
