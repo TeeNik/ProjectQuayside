@@ -25,8 +25,10 @@ group ""
 
 project "Quayside"
 	location "Quayside"
-	kind "SharedLib"
+	kind "StaticLib"
 	language "C++"
+	cppdialect "C++17"
+	staticruntime "on"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -67,8 +69,6 @@ project "Quayside"
 	}
 
 	filter "system:windows"
-		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines
@@ -77,11 +77,6 @@ project "Quayside"
 			"QS_BUILD_DLL",
 			"GLFW_INCLUDE_NONE"
 		}
-	
-		postbuildcommands
-		{
-			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
-		}
 
 	filter "configurations:Debug"
 		defines 
@@ -89,26 +84,25 @@ project "Quayside"
 			"QS_DEBUG",
 			"QS_ENABLE_ASSERTS"
 		}
-		staticruntime "off"
 		runtime "Debug"
-		symbols "On"
+		symbols "on"
 
 	filter "configurations:Release"
 		defines "QS_RELEASE"
-		staticruntime "off"
 		runtime "Release"
-		optimize "On"
+		optimize "on"
 
 	filter "configurations:Dist"
 		defines "QS_DIST"
-		staticruntime "off"
 		runtime "Release"
-		optimize "On"
+		optimize "on"
 
 project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
+	cppdialect "C++17"
+	staticruntime "on"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -138,8 +132,6 @@ project "Sandbox"
 	}
 
 	filter "system:windows"
-		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines
@@ -149,18 +141,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "QS_DEBUG"
-		staticruntime "off"
 		runtime "Debug"
-		symbols "On"
+		symbols "on"
 
 	filter "configurations:Release"
 		defines "QS_RELEASE"
-		staticruntime "off"
 		runtime "Release"
-		optimize "On"
+		optimize "on"
 
 	filter "configurations:Dist"
 		defines "QS_DIST"
-		staticruntime "off"
 		runtime "Release"
-		optimize "On"
+		optimize "on"

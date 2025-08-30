@@ -7,14 +7,11 @@ public:
 	{
 	}
 
-	void OnUpdate() override
+	void OnImGuiRender() override
 	{
-		//QS_INFO("ExampleLayer::OnUpdate");
-	}
-
-	void OnEvent(Quayside::Event& Event) override
-	{
-		//QS_WARN("ExampleLayer::OnEvent {0}", Event.ToString());
+		//ImGui::Begin("Test");
+		//ImGui::Text("Test");
+		//ImGui::End();
 	}
 };
 
@@ -24,7 +21,6 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
-		PushOverlay(new Quayside::ImGuiLayer);
 	}
 
 	~Sandbox()
