@@ -146,6 +146,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platforms\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Platforms\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platforms\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Quayside.h" />
@@ -163,10 +164,12 @@
     <ClInclude Include="src\Quayside\LayerStack.h" />
     <ClInclude Include="src\Quayside\Log.h" />
     <ClInclude Include="src\Quayside\MouseButtonCodes.h" />
+    <ClInclude Include="src\Quayside\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Quayside\Window.h" />
     <ClInclude Include="src\qspch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platforms\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Platforms\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platforms\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Quayside\Application.cpp" />

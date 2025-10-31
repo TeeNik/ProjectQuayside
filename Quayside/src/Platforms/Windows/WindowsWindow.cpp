@@ -5,7 +5,7 @@
 #include "Quayside/Events/KeyEvent.h"
 #include "Quayside/Events/MouseEvent.h"
 #include <GLFW/glfw3.h>
-#include "glad/glad.h"
+#include "Platforms/OpenGL/OpenGLContext.h"
 
 namespace Quayside
 {
@@ -34,7 +34,7 @@ namespace Quayside
     void WindowsWindow::OnUpdate()
     {
         glfwPollEvents();
-        glfwSwapBuffers(Window);
+        Context->SwapBuffers();
     }
 
     void WindowsWindow::SetEventCallback(const EventCallbackFunc& InCallback)
@@ -61,6 +61,7 @@ namespace Quayside
 
         QS_CORE_INFO("Creating window {0} {1} {2}", Data.Title, Data.Width, Data.Height);
 
+
         if (!bGLFWInitialized)
         {
             int Success = glfwInit();
@@ -70,9 +71,9 @@ namespace Quayside
         }
 
         Window = glfwCreateWindow(Data.Width, Data.Height, Data.Title.c_str(), nullptr, nullptr);
-        glfwMakeContextCurrent(Window);
-        int Status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-        QS_CORE_ASSERT(Status, "Failed to initialize Glad!");
+        Context = new OpenGLContext(Window);
+        Context->Init();
+
         glfwSetWindowUserPointer(Window, &Data);
         SetVSync(true);
 

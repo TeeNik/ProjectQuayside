@@ -30,6 +30,8 @@ namespace Quayside
 		bool bRunning = true;
 		LayerStack LayerStack;
 
+		unsigned int VertexArray, VertexBuffer, IndexBuffer;
+
 		static Application* Instance;
 	};
 

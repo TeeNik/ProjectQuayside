@@ -1,6 +1,11 @@
 ﻿#pragma once
 #include "Quayside/Window.h"
 
+namespace Quayside
+{
+    class GraphicsContext;
+}
+
 struct GLFWwindow;
 
 namespace Quayside
@@ -27,6 +32,7 @@ namespace Quayside
         virtual void Shutdown();
 
         GLFWwindow* Window;
+        GraphicsContext* Context;
 
         struct WindowData
         {
